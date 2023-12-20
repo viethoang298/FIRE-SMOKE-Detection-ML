@@ -1,6 +1,4 @@
-
 import streamlit as st  # type: ignore
-
 import cv2
 from ultralytics import YOLO
 import requests # type: ignore
