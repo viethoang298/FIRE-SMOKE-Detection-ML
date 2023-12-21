@@ -171,7 +171,7 @@ def main():
 
     # Load the selected model
     # model_path = os.path.join(models_dir, selected_model + ".pt") #type: ignore
-    model = load_model("https://drive.google.com/file/d/1ean1yiBUUNGGyQaCs_Lt0usr-wAM9tqD/view?usp=sharing")
+    model = load_model("general-models/yolov8m.pt")
 
     # Add a section divider
     st.markdown("---")
