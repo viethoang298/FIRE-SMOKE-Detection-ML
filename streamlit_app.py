@@ -40,7 +40,7 @@ st.title("Fire and Smoke Detection using YOLOv8 ")
 with st.expander("Model Characteristics"):
     chars_alt = pd.DataFrame({
         "Param": ["Epochs", "IMG_SIZE", "BATCH_SIZE", "LR"],
-        "Value": [30, 640, 20, 0.01]
+        "Value": [50, 640, 20, 0.01]
     })
     st._legacy_table(chars_alt)
 
