@@ -10,7 +10,7 @@ import yolov7
 import tempfile
 #sys.path.append("yolov7")
 
-model_yolov8 = "fire-models/fire_m.pt"
+model_yolov8 = "fire-models/best.pt"
 
 
 st.set_page_config(
