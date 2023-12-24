@@ -21,7 +21,7 @@ st.set_page_config(
 )
 
 with st.sidebar:
-    model_selection = "YOLOv8"    #st.selectbox("Choose a model:", ["YOLOv8", "YOLOv7"]) #  
+    model_selection = "YOLOv8"    
     # Model selection dropdown
     st.header("Image Config")
     uploaded_file = st.file_uploader(
@@ -74,12 +74,12 @@ if model_selection == "YOLOv8":
     except Exception as ex:
         st.error(f"Unable to load YOLOv8 model. Check the specified path: {model_yolov8}")
         st.error(ex)
-elif model_selection == "YOLOv7":
-    try:
-        model = load_yolov7_model()
-    except Exception as ex:
-        st.error(f"Unable to load YOLOv7 model. Check the specified path: {model_yolov7}")
-        st.error(ex)
+#elif model_selection == "YOLOv7":
+#    try:
+#        model = load_yolov7_model()
+#    except Exception as ex:
+#        st.error(f"Unable to load YOLOv7 model. Check the specified path: {model_yolov7}")
+#        st.error(ex)
 
 def process_image_detections(res, col2, model_selection):
     if model_selection == "YOLOv8":
