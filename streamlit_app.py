@@ -35,7 +35,7 @@ st.title("Fire and Smoke Detection using YOLOv8 ")
 #st.caption("a Project for MSc in Business Analytics (AUEB) - Machine Learning and Content Analytics 2023")
 with st.expander("Model Characteristics"):
     chars_alt = pd.DataFrame({
-        "Param": ["Epochs", "IMG_SIZE", "BATCH_SIZE", "LR"],
+        "Param": ["Epochs", "IMG_SIZE", "BATCH_SIZE", "Learning Rate"],
         "Value": [50, 640, 20, 0.01]
     })
     st._legacy_table(chars_alt)
