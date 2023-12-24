@@ -10,7 +10,7 @@ import yolov7
 import tempfile
 #sys.path.append("yolov7")
 
-model_yolov8 = "fire-models/fire_m.pt"
+model_yolov8 = "models/yolov8/weights/fire_model.pt"
 model_yolov7 = "models/yolov7/runs/train/exp/weights/best.pt"
 
 st.set_page_config(
@@ -21,7 +21,7 @@ st.set_page_config(
 )
 
 with st.sidebar:
-    model_selection = st.selectbox("Choose a model:", ["YOLOv8", "YOLOv7"]) #  
+    model_selection = "YOLOv8"    #st.selectbox("Choose a model:", ["YOLOv8", "YOLOv7"]) #  
     # Model selection dropdown
     st.header("Image Config")
     uploaded_file = st.file_uploader(
@@ -35,12 +35,12 @@ with st.sidebar:
 
     confidence = float(st.slider("Select Model Confidence", 15, 100, 20)) / 100
 
-st.title("Fire and Smoke Detection using YOLOv8 & YOLOv7")
-st.caption("a Project for MSc in Business Analytics (AUEB) - Machine Learning and Content Analytics 2023")
+st.title("Fire and Smoke Detection using YOLOv8 ")
+#st.caption("a Project for MSc in Business Analytics (AUEB) - Machine Learning and Content Analytics 2023")
 with st.expander("Model Characteristics"):
     chars_alt = pd.DataFrame({
-        "Param": ["Dataset", "Images", "Epochs", "IMG_SIZE", "BATCH_SIZE", "LR"],
-        "Value": ["https://universe.roboflow.com/kirzone/fire-iejes/dataset/2", 1706, 30, 640, 20, 0.01]
+        "Param": ["Epochs", "IMG_SIZE", "BATCH_SIZE", "LR"],
+        "Value": [30, 640, 20, 0.01]
     })
     st._legacy_table(chars_alt)
 
@@ -212,4 +212,3 @@ if st.sidebar.button("Detect Objects"):
             else:
                 with open(processed_video_path, "rb") as f:
                     st.video(f.read())
-
