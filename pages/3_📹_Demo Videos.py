@@ -31,12 +31,12 @@ st.markdown(
         unsafe_allow_html=True
     )
 
-st.markdown("<div class='title'>Demo Videos</div>", unsafe_allow_html=True)
+st.markdown("<div class='title'>Demo Images</div>", unsafe_allow_html=True)
 
 
 st.caption("<div class='text'>Videos do not have sound.</div>", unsafe_allow_html=True)
 
-videos = glob('demo-videos/*')
+videos = glob('demo-images/pexels-victor-rogov-6775923 (1080p).mp4')
 
 for video in videos:
     st.video(video)
